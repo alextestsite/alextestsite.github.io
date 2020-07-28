@@ -10,11 +10,7 @@
 </head>
 <body>
 	<!-- <h1>Форма регистрации</h1> -->
-	<div class="container mt-4">
-	
-		<?php
-			if($_COOKIE['user'] == ''):		
-		?>	
+	<div class="container mt-4">	
 	
 		<div class="row">	
 			<div class="col">
@@ -46,10 +42,6 @@
 		
 			</form>
 			</div>
-		<?php else:?>	
-		<p>Привет <?=$_COOKIE['user']?>.Чтобы выйти нажмите <a href="exit.php">здесь</a>.</p>		
-			
-		<?php endif;?>
 			
 		</div>		
 		
