@@ -1,0 +1,25 @@
+<?php
+	$login = filter_var(trim($_POST['login']),
+	FILTER_SANITIZE_STRING);
+	
+	$password = filter_var(trim($_POST['password']),
+	FILTER_SANITIZE_STRING);
+	
+	$password = md5($pass."gywfduf567423"); //функция Хеша для пароля + немного соли
+
+	$mysql = new mysqli('localhost','root','root','registerform-bd');
+	
+	$result = $mysql->query("SELECT * FROM `regsql`
+							WHERE `login` = '$login' AND `password` = '$password'");
+	$regsql = $result->fetch_assoc(); //  Конвертация данных в привычный массив						
+	
+	
+
+	
+	$mysql->close();
+	
+	header('Location: /');
+	
+	
+	
+?>
