@@ -1,0 +1,18 @@
+form {
+		width: 300px;
+		border: 1px solid #000000;
+		white-space: nowrap; 
+}	
+body {
+	background-color:black;
+		
+}
+h1 {
+  color: red;
+
+}
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
